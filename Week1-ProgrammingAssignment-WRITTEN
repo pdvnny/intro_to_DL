@@ -1,0 +1,70 @@
+COURSERA - CU Boulder - Introduction to Deep Learning
+
+Parker Dunn
+30 May 2022
+
+Week 1 Programming Assignment
+
+-------------------------------------------------------------
+
+PROBLEM 1 - Peer Review Problem - Single-Layer and Multilayer Perceptron Learning
+
+**** PART A ****
+
+i. NOT x1
+
+I believe you can do this with a single-layer perceptron.
+- Use w = -1
+- Use threshold of 0 for the activation function
+
+If x1 = True (i.e., > 0), then w * x1 would be False (i.e., <= 0)
+
+
+ii. x1 NOR x2
+
+This indicates
+
+x1		x2		result
+1		1		0
+1		0		0
+0		1		0
+0		0		1
+
+This should be possible with a single-layer perceptron by using..
+- w1 and w2 equal to -1
+- threshold for the activation function of -1
+
+This would mean x1*w1 + x2*w2 results in "False" unless the output is 0, which is greater than -1,
+which only happens if x1 and x2 are negative
+
+
+iii. x1 XNOR x2
+
+This indicates "not exclusive or"
+
+x1		x2		result
+1		1		1
+1		0		0
+0		1		0
+0		0		1
+
+
+This one is not linearly separable so it cannot be done with a single perceptron.
+
+
+**** PART B ****
+
+x1	x2	result
+0   0   1
+0   1   0
+1   0   0
+1   1   1
+
+- The first condition can be checked using a NOR gate.
+- The last condition can be checked using a AND gate.
+- Then, if either of these results is true the the output should be true.
+
+
+Implementation of Foward Propagation in Python
+
+
