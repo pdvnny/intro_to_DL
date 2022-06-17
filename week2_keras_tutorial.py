@@ -18,4 +18,10 @@ def mymodel(nLayers, nNeurons, input_dim, output_dim):
 	
 	return model
 
-##
+## Creating a Model
+
+model = mymodel(5, [4, 4, 4, 4, 4], 100, 5)  # 5 Layers | 4 Neurons in each layer | 100 features for input | 5 output values
+
+
+## Optimizers
+model.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
